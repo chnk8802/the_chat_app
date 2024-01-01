@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --port 3000",
-    "dev": "vite --port 3000",
-    "build": "vite build",
+    "start": "vite --openssl-legacy-provider --port 3000",
+    "dev": "vite --openssl-legacy-provider --port 3000",
+    "build": "vite --openssl-legacy-provider build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
