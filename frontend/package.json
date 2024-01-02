@@ -4,26 +4,29 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --openssl-legacy-provider --port 3000",
-    "dev": "vite --openssl-legacy-provider --port 3000",
-    "build": "vite --openssl-legacy-provider build",
+    "start": "vite --port 3000",
+    "dev": "vite --port 3000",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.1",
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
+    "@mui/material": "^5.15.2",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.10",
     "axios": "^1.5.1",
     "framer-motion": "^10.16.4",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-notification-badge": "^1.5.1",
     "react-router-dom": "^6.16.0",
     "react-scrollable-feed": "^1.3.2",
-    "socket.io-client": "^4.7.2"
+    "socket.io-client": "^4.7.2",
+    "styled-components": "^6.1.6"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

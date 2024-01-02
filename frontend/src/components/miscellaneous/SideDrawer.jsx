@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Box, Button, Tooltip, Text, Menu, MenuButton, MenuList, CheckboxGroup, Avatar, MenuItem, Drawer, useDisclosure, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Input, useToast, Spinner } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import NotificationBadge from 'react-notification-badge';
+// import Badge from '@mui/material/Badge';
+import { Badge as ChakraBadge } from '@chakra-ui/react';
 import { BellIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import { ChatState } from '../../Context/ChatProvider';
 import ProfileModal from './ProfileModal';
@@ -110,14 +111,12 @@ function SideDrawer() {
                 <div>
                     <Menu>
                         <MenuButton p={1}>
-                            <NotificationBadge
-                                count={notification.length}
-                            />
-                            <BellIcon fontSize="2xl" m={1} />
-                            <MenuList
-                            // overflowY='auto'
-                            // style={{ maxHeight: "50vh" }}
-                            >
+                            <Box>
+                                <ChakraBadge style={{ backgroundColor: "#e60707", color: "white", position: "absolute" }}>{notification.length != 0 ? (notification.length > 99 ? "99+" : notification.length) : ""}
+                                </ChakraBadge>
+                                <BellIcon fontSize="2xl" m={1} />
+                            </Box>
+                            <MenuList>
                                 {!notification.length && "No new Messages"}
                                 {notification.map((noti) => (
                                     <MenuItem
