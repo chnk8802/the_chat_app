@@ -43,9 +43,9 @@ const ExpressServer = app.listen(port, '0.0.0.0', console.log(`Server Strated on
 
 const io = new Server(ExpressServer, {
     pingTimeout: 60000,
-    cors: {
-        origin: ['http://localhost:3000', 'https://the-chat-app-zas7.onrender.com'],
-    },
+    // cors: {
+    //     origin: ['http://localhost:3000', 'https://the-chat-app-zas7.onrender.com'],
+    // },
 });
 
 io.on("connection", (socket) => {
