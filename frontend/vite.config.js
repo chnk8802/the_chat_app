@@ -10,7 +10,6 @@ export default defineConfig({
     //         '/api': {
     //             target: 'http://localhost:5000',
     //             changeOrigin: true,
-    //             origin: 'https://the-chat-app-zas7.onrender.com',
     //         },
     //     },
     // },
